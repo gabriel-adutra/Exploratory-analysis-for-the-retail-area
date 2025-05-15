@@ -326,12 +326,12 @@ def main():
     conn = connect_to_database()
     
     try:
-        # Análise 1: Vendas de Office Supplies - ok 
+        # Análise 1: Vendas de Office Supplies. 
         print("\n1. Análise de Vendas de Office Supplies:")
         result = analyze_office_supplies_sales(conn)
         print(result)
         
-        # Análise 2: Vendas por Data - ok 
+        # Análise 2: Vendas por Data.
         print("\n2. Análise de Vendas por Data:")
         result = analyze_sales_by_date(conn)
         print(result)
@@ -339,43 +339,43 @@ def main():
         plt.xticks(result['Order Date'][::30], result['Order Date'][::30], rotation=45)  # Uma data a cada 30 dias
         plt.show(block=True)
         
-        # Análise 3: Vendas por Estado - ok 
+        # Análise 3: Vendas por Estado.
         print("\n3. Análise de Vendas por Estado:")
         result = analyze_sales_by_state(conn)
         print(result)
         plot_bar_chart(result, 'State', 'TotalSales', 'Total Sales by State', 90, 'skyblue')
         plt.show(block=True)
         
-        # Análise 4: Top Cidades - ok 
+        # Análise 4: Top Cidades.
         print("\n4. Análise de Top Cidades:")
         result = analyze_top_cities(conn)
         print(result)
         plot_bar_chart(result, 'City', 'TotalSales', 'Top 10 Cities by Sales', 90, 'skyblue')
         plt.show(block=True)
         
-        # Análise 5: Vendas por Segmento - ok 
+        # Análise 5: Vendas por Segmento. 
         print("\n5. Análise de Vendas por Segmento:")
         result = analyze_sales_by_segment(conn)
         print(result)
         plot_pie_chart(result, 'Segment', 'TotalSales', 'Total Sales by Segment')
         plt.show(block=True)
         
-        # Análise 6: Vendas por Segmento e Ano - ok 
+        # Análise 6: Vendas por Segmento e Ano. 
         print("\n6. Análise de Vendas por Segmento e Ano:")
         result = analyze_sales_by_segment_and_year(conn)
         print(result)
         
-        # Análise 7: Quantas vendas receberiam 15% de desconto
+        # Análise 7: Quantas vendas receberiam 15% de desconto.
         print("\n7. Quantas vendas receberiam 15% de desconto:")
         result = analyze_sales_with_discount_15(conn)
         print(result)
 
-        # Análise 8: Média do valor de venda antes e depois do desconto
+        # Análise 8: Média do valor de venda antes e depois do desconto.
         print("\n8. Média do valor de venda antes e depois do desconto:")
         result = analyze_discount_impact(conn)
         print(result)
 
-        # Análise 9: Média de vendas por segmento, por ano e por mês
+        # Análise 9: Média de vendas por segmento, por ano e por mês.
         print("\n9. Média de vendas por segmento, por ano e por mês:")
         result = analyze_sales_by_segment_month_year(conn)
         print(result)
@@ -384,7 +384,7 @@ def main():
         plot_line_chart(result, 'Date', 'AvgSales', 'Average Sales by Segment Over Time', 'Segment')
         plt.show(block=True)
         
-        # Análise 10: Total de Vendas Por Categoria e SubCategoria - ok 
+        # Análise 10: Total de Vendas Por Categoria e SubCategoria.
         print("\n10. Total de Vendas Por Categoria e SubCategoria, Considerando Somente as Top 12 SubCategorias:")
         result = analyze_top_subcategories(conn)
         print(result)
