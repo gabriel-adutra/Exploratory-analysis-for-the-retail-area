@@ -176,12 +176,10 @@ def plot_nested_pie_chart(df, category_column, subcategory_column, value_column,
     legend_elements = []
     for i, (category, subcategories) in enumerate(subcategory_sums.groupby(level=0)):
         # Adiciona a categoria
-        legend_elements.append(plt.Rectangle((0,0),1,1, fc=category_colors[i], label=category))
+        legend_elements.append(plt.Rectangle((0,0), 1,1, fc=category_colors[i], label=category))
         # Adiciona as subcategorias
         for j, subcat in enumerate(subcategories.index.get_level_values(1)):
-            legend_elements.append(plt.Rectangle((0,0),1,1, 
-                                              fc=subcategory_colors[i*len(subcategories)+j], 
-                                              label=f"  {subcat}"))
+            legend_elements.append(plt.Rectangle((0,0), 1,1, fc=subcategory_colors[i*len(subcategories)+j], label=f"  {subcat}"))
     
     # Adiciona a legenda
     plt.legend(handles=legend_elements, 
@@ -390,8 +388,7 @@ def main():
         print("\n10. Total de Vendas Por Categoria e SubCategoria, Considerando Somente as Top 12 SubCategorias:")
         result = analyze_top_subcategories(conn)
         print(result)
-        plot_nested_pie_chart(result, 'Category', 'Sub-Category', 'TotalSales', 
-                            'Distribution of Sales by Category and Subcategory')
+        plot_nested_pie_chart(result, 'Category', 'Sub-Category', 'TotalSales', 'Distribution of Sales by Category and Subcategory')
         plt.show(block=True)
         
     finally:
