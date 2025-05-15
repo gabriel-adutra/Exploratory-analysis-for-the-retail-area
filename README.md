@@ -1,3 +1,5 @@
+This project was developed as part of the course "Fundamentals of Python Language for Data Analysis and Data Science" offered by Data Science Academy (DSA).
+
 The objective is to answer 10 business questions based on a dataset about a retail chain that sells various products in multiple cities across the United States.
 
 We will analyze the data and then answer these 10 questions:
@@ -40,4 +42,6 @@ Present the result using a line chart.
 • Business Question 10:
 What is the total sales by category and sub-category, considering only the top 12 sub-categories?
 Present everything using a single chart.
+
+Clone the repository and run: python3 superstore_sales_analysis.py to get the answers to the questions above.
 
