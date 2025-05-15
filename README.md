@@ -1,4 +1,4 @@
-This project was developed as part of the course "Fundamentals of Python Language for Data Analysis and Data Science" offered by Data Science Academy (DSA).
+This project was developed as part of the course "Fundamentals of Python Language for Data Analysis and Data Science" offered by Data Science Academy - (DSA).
 
 The objective is to answer 10 business questions based on a dataset about a retail chain that sells various products in multiple cities across the United States.
 
